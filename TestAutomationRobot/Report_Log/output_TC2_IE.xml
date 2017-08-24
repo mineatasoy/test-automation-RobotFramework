@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170803 15:52:52.619" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Python27\Scripts\IMDB_Tests.robot" id="s1" name="IMDB Tests">
+<test id="s1-t1" name="TC2 - IMDB Search Functionality - IExplorer">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>ie</arg>
+</arguments>
+<msg timestamp="20170803 15:52:52.806" level="INFO">Opening browser 'ie' to base url 'http://www.imdb.com'</msg>
+<status status="PASS" endtime="20170803 15:53:10.273" starttime="20170803 15:52:52.806"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170803 15:53:10.288" starttime="20170803 15:53:10.273"></status>
+</kw>
+<kw name="Search By Titles">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>${filmName}</arg>
+</arguments>
+<msg timestamp="20170803 15:53:10.288" level="INFO">Typing text 'Step' into text field 'name=q'</msg>
+<status status="PASS" endtime="20170803 15:53:31.063" starttime="20170803 15:53:10.288"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>id=quicksearch</arg>
+<arg>Titles</arg>
+</arguments>
+<msg timestamp="20170803 15:53:31.063" level="INFO">Selecting label(s) 'Titles' from list 'id=quicksearch'.</msg>
+<status status="PASS" endtime="20170803 15:53:31.780" starttime="20170803 15:53:31.063"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=navbar-submit-button</arg>
+</arguments>
+<msg timestamp="20170803 15:53:31.780" level="INFO">Clicking button 'id=navbar-submit-button'.</msg>
+<status status="PASS" endtime="20170803 15:53:36.544" starttime="20170803 15:53:31.780"></status>
+</kw>
+<status status="PASS" endtime="20170803 15:53:36.544" starttime="20170803 15:53:10.288"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[2]/a</arg>
+<arg>message=${filmName}</arg>
+</arguments>
+<msg timestamp="20170803 15:53:36.778" level="INFO">Current page contains link 'xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[2]/a'.</msg>
+<status status="PASS" endtime="20170803 15:53:36.778" starttime="20170803 15:53:36.544"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[2]/a</arg>
+</arguments>
+<msg timestamp="20170803 15:53:36.778" level="INFO">Clicking link 'xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[2]/a'.</msg>
+<status status="PASS" endtime="20170803 15:53:42.306" starttime="20170803 15:53:36.778"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170803 15:53:45.585" starttime="20170803 15:53:42.306"></status>
+</kw>
+<doc>This testcase is created to ensure that IMDB pagesearch functionality works as expected for IExplorer
+
+Steps
+
+1. Open Browser and navigate to URL: http://www.imdb.com
+
+2. Insert a film name on search box and choose Titles from the list
+
+3. Click search button
+
+4. Verify that search result return correct value</doc>
+<status status="PASS" endtime="20170803 15:53:45.585" critical="yes" starttime="20170803 15:52:52.806"></status>
+</test>
+<doc>This project is created to test some functionalities on IMDB Page.
+
+http://www.imdb.com
+
+Tests
+
+TC1 - IMDB Page Login Logout - Chrome
+TC1 - IMDB Page Login Logout - IExplorer
+TC2 - IMDB Search Functionality - Chrome
+TC2 - IMDB Search Functionality - IExplorer
+TC3 - IMDB Adding a film to the Watchlist- Chrome
+TC3 - IMDB Adding a film to the Watchlist- IExplorer
+
+
+</doc>
+<status status="PASS" endtime="20170803 15:53:45.585" starttime="20170803 15:52:52.634"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="IMDB Tests" pass="1">IMDB Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170803 18:01:41.174" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Python27\Scripts\IMDB_Tests.robot" id="s1" name="IMDB Tests">
+<test id="s1-t1" name="TC3 - IMDB Adding a film to the Watchlist- IExplorer">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>ie</arg>
+</arguments>
+<msg timestamp="20170803 18:01:41.348" level="INFO">Opening browser 'ie' to base url 'http://www.imdb.com'</msg>
+<status status="PASS" endtime="20170803 18:01:53.551" starttime="20170803 18:01:41.348"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170803 18:01:53.567" starttime="20170803 18:01:53.551"></status>
+</kw>
+<kw name="Login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=nblogin</arg>
+</arguments>
+<msg timestamp="20170803 18:01:53.567" level="INFO">Clicking element 'id=nblogin'.</msg>
+<status status="PASS" endtime="20170803 18:01:58.489" starttime="20170803 18:01:53.567"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="signin-options"]/div/div/a[4]/span[2]</arg>
+</arguments>
+<msg timestamp="20170803 18:01:58.489" level="INFO">Clicking element 'xpath=//*[@id="signin-options"]/div/div/a[4]/span[2]'.</msg>
+<status status="PASS" endtime="20170803 18:02:01.350" starttime="20170803 18:01:58.489"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name = email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20170803 18:02:01.350" level="INFO">Typing text 'mineatasoy@gmail.com' into text field 'name = email'</msg>
+<status status="PASS" endtime="20170803 18:03:42.065" starttime="20170803 18:02:01.350"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=ap_password</arg>
+<arg>text=${pwd}</arg>
+</arguments>
+<msg timestamp="20170803 18:03:42.065" level="INFO">Typing password into text field 'id=ap_password'</msg>
+<status status="PASS" endtime="20170803 18:04:22.797" starttime="20170803 18:03:42.065"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=signInSubmit</arg>
+</arguments>
+<msg timestamp="20170803 18:04:22.797" level="INFO">Clicking button 'id=signInSubmit'.</msg>
+<status status="PASS" endtime="20170803 18:04:23.546" starttime="20170803 18:04:22.797"></status>
+</kw>
+<status status="PASS" endtime="20170803 18:04:23.546" starttime="20170803 18:01:53.567"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20170803 18:04:28.555" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170803 18:04:28.555" starttime="20170803 18:04:23.546"></status>
+</kw>
+<kw name="Search By Titles">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>${filmName}</arg>
+</arguments>
+<msg timestamp="20170803 18:04:28.555" level="INFO">Typing text 'Step' into text field 'name=q'</msg>
+<status status="PASS" endtime="20170803 18:04:54.555" starttime="20170803 18:04:28.555"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>id=quicksearch</arg>
+<arg>Titles</arg>
+</arguments>
+<msg timestamp="20170803 18:04:54.555" level="INFO">Selecting label(s) 'Titles' from list 'id=quicksearch'.</msg>
+<status status="PASS" endtime="20170803 18:04:56.037" starttime="20170803 18:04:54.555"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=navbar-submit-button</arg>
+</arguments>
+<msg timestamp="20170803 18:04:56.037" level="INFO">Clicking button 'id=navbar-submit-button'.</msg>
+<status status="PASS" endtime="20170803 18:04:58.736" starttime="20170803 18:04:56.037"></status>
+</kw>
+<status status="PASS" endtime="20170803 18:04:58.736" starttime="20170803 18:04:28.555"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[2]/a</arg>
+</arguments>
+<msg timestamp="20170803 18:04:58.736" level="INFO">Clicking link 'xpath=//*[@id="main"]/div/div[2]/table/tbody/tr[1]/td[2]/a'.</msg>
+<status status="PASS" endtime="20170803 18:05:06.755" starttime="20170803 18:04:58.736"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="title-overview-widget"]/div[2]/div[2]/div/div[2]/div[1]</arg>
+</arguments>
+<msg timestamp="20170803 18:05:06.755" level="INFO">Clicking element 'xpath=//*[@id="title-overview-widget"]/div[2]/div[2]/div/div[2]/div[1]'.</msg>
+<status status="PASS" endtime="20170803 18:05:08.268" starttime="20170803 18:05:06.755"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>xpath=//*[@id="navWatchlistMenu"]/p/a</arg>
+</arguments>
+<msg timestamp="20170803 18:05:08.268" level="INFO">Clicking link 'xpath=//*[@id="navWatchlistMenu"]/p/a'.</msg>
+<status status="PASS" endtime="20170803 18:05:12.918" starttime="20170803 18:05:08.268"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>xpath=//*[@id="center-1-react"]/div/div[2]/div[1]/div[1]/div[1]/select</arg>
+<arg>Date Added</arg>
+</arguments>
+<msg timestamp="20170803 18:05:12.918" level="INFO">Selecting label(s) 'Date Added' from list 'xpath=//*[@id="center-1-react"]/div/div[2]/div[1]/div[1]/div[1]/select'.</msg>
+<status status="PASS" endtime="20170803 18:05:16.861" starttime="20170803 18:05:12.918"></status>
+</kw>
+<kw name="Page Should Contain Link" library="Selenium2Library">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="page-1"]/div/div/div[2]/h3/a</arg>
+<arg>message=${filmName}</arg>
+</arguments>
+<msg timestamp="20170803 18:05:17.220" level="INFO">Current page contains link '//*[@id="page-1"]/div/div/div[2]/h3/a'.</msg>
+<status status="PASS" endtime="20170803 18:05:17.220" starttime="20170803 18:05:16.861"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>//*[@id="page-1"]/div/div/div[2]/h3/a</arg>
+</arguments>
+<msg timestamp="20170803 18:05:17.220" level="INFO">Clicking link '//*[@id="page-1"]/div/div/div[2]/h3/a'.</msg>
+<status status="PASS" endtime="20170803 18:05:22.459" starttime="20170803 18:05:17.220"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="title-overview-widget"]/div[2]/div[2]/div/div[2]/div[1]</arg>
+</arguments>
+<msg timestamp="20170803 18:05:22.459" level="INFO">Clicking element 'xpath=//*[@id="title-overview-widget"]/div[2]/div[2]/div/div[2]/div[1]'.</msg>
+<status status="PASS" endtime="20170803 18:05:23.816" starttime="20170803 18:05:22.459"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>xpath=//*[@id="navWatchlistMenu"]/p/a</arg>
+</arguments>
+<msg timestamp="20170803 18:05:23.816" level="INFO">Clicking link 'xpath=//*[@id="navWatchlistMenu"]/p/a'.</msg>
+<status status="PASS" endtime="20170803 18:05:28.900" starttime="20170803 18:05:23.816"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Select From List By Label</arg>
+<arg>xpath=//*[@id="center-1-react"]/div/div[2]/div[1]/div[1]/div[1]/select</arg>
+<arg>Date Added</arg>
+</arguments>
+<status status="PASS" endtime="20170803 18:05:28.900" starttime="20170803 18:05:28.900"></status>
+</kw>
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>text=${filmName}</arg>
+</arguments>
+<msg timestamp="20170803 18:05:32.035" level="INFO">Current page does not contain text 'Step'.</msg>
+<status status="PASS" endtime="20170803 18:05:32.035" starttime="20170803 18:05:28.900"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Logout</arg>
+</arguments>
+<status status="PASS" endtime="20170803 18:05:32.035" starttime="20170803 18:05:32.035"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170803 18:05:35.220" starttime="20170803 18:05:32.035"></status>
+</kw>
+<doc>This testcase is created to ensure that a film can be added to watchlist successfully on IMDB page on IExplorer
+
+Steps
+
+1. Open Browser and navigate to URL: http://www.imdb.com
+
+2. Login to the page with a proper user
+
+3. Search the film name that you want to add to the watchlist.
+
+4. Click  'Add watchlist button'
+
+5. Open wathclist
+
+6. Verify that the film is included in watchlist
+
+7. Open the film detail again and click 'Remove from List'
+
+8. Open watchlist
+
+9. Verify that the film is not included in the list</doc>
+<status status="PASS" endtime="20170803 18:05:35.220" critical="yes" starttime="20170803 18:01:41.348"></status>
+</test>
+<doc>This project is created to test some functionalities on IMDB Page.
+
+http://www.imdb.com
+
+Tests
+
+TC1 - IMDB Page Login Logout - Chrome
+TC1 - IMDB Page Login Logout - IExplorer
+TC2 - IMDB Search Functionality - Chrome
+TC2 - IMDB Search Functionality - IExplorer
+TC3 - IMDB Adding a film to the Watchlist- Chrome
+TC3 - IMDB Adding a film to the Watchlist- IExplorer
+</doc>
+<status status="PASS" endtime="20170803 18:05:35.220" starttime="20170803 18:01:41.190"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="IMDB Tests" pass="1">IMDB Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
